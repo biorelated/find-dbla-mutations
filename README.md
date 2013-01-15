@@ -1,6 +1,6 @@
 = find-dbla-mutations
 
-Description goes here.
+find mutations in dbla sequence tags.
 
 == Contributing to find-dbla-mutations
  
