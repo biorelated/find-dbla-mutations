@@ -38,30 +38,30 @@ class Selection
   end
 end
 
-#file_path = "#{ENV['HOME']}/Batch2/batch2_cafs/pipeline2/example.fasta"
-file_path = "#{ENV['HOME']}/BGI_data/analysis/clustering/cd-hit/98/cluster2489/cluster_2489.fasta"
+##file_path = "#{ENV['HOME']}/Batch2/batch2_cafs/pipeline2/example.fasta"
+#file_path = "#{ENV['HOME']}/BGI_data/analysis/clustering/cd-hit/98/cluster2489/cluster_2489.fasta"
 
-selection = Selection.new
+#selection = Selection.new
 
-hash_data = selection.fasta_to_hash(file_path)
+#hash_data = selection.fasta_to_hash(file_path)
 
-data  = selection.get_seqs(hash_data)
+#data  = selection.get_seqs(hash_data)
 
-column_seq = selection.get_column_as_string(data,0)
+#column_seq = selection.get_column_as_string(data,0)
 
-bioseq = Bio::Sequence::NA.new(column_seq)
+#bioseq = Bio::Sequence::NA.new(column_seq)
 
-codons = selection.get_codons(bioseq)
+#codons = selection.get_codons(bioseq)
 
-#puts codons.inspect
+##puts codons.inspect
 
-puts selection.get_aa(bioseq).inspect
+#puts selection.get_aa(bioseq).inspect
 
-#puts selection.index_of_least_identical(codons).compact.inspect
+##puts selection.index_of_least_identical(codons).compact.inspect
 
-#create an instance of a standard codon table
-#t = Bio::CodonTable[1]
-#puts t.inspect
-#TODO detemine the whether a site is synonymous or non-synonymous
+##create an instance of a standard codon table
+##t = Bio::CodonTable[1]
+##puts t.inspect
+##TODO detemine the whether a site is synonymous or non-synonymous
 
 

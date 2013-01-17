@@ -3,7 +3,7 @@ class Mutation
 
   #convert a fasta file to a hash
   def fasta_to_hash(file_path)
-    Bio::FlatFile.auto(file_path){ |f| f.map {|entry| Hash.[](entry.definition.to_sym,[entry.seq.to_s])} }
+    Bio::FlatFile.auto(file_path){ |f| f.map {|entry| Hash.[](entry.definition.to_sym,[entry.seq.upcase.to_s])} }
   end
 
   #input is an array of hashes
@@ -31,11 +31,11 @@ class Mutation
   end
 
   def purine?(base)
-    true if base =~ /[ga]/
+    true if base =~ /[ga]/i
   end
 
   def pyrimidine?(base)
-    true if base =~ /[ct]/
+    true if base =~ /[ct]/i
   end
 
   def transversion?(bases)
