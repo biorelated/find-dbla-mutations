@@ -31,11 +31,11 @@ class Mutation
   end
 
   def purine?(base)
-    true if base =~ /[ga]/i
+    true if base =~ /[GA]/i
   end
 
   def pyrimidine?(base)
-    true if base =~ /[ct]/i
+    true if base =~ /[CT]/i
   end
 
   def transversion?(bases)
