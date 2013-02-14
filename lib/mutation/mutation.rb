@@ -89,4 +89,3 @@ class Mutation
     end
   end
 end
-
