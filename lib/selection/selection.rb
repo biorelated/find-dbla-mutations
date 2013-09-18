@@ -38,7 +38,10 @@ class PopGen
       aaas = column.to_s.count('A')
       cees = column.to_s.count('C')
       tees = column.to_s.count('T')
-      "#{gees},#{aaas},#{cees},#{tees}"
+      del  = column.to_s.count('-')
+      "#{gees},#{aaas},#{cees},#{tees},#{del}"
+      # [gees,aaas,cees,tees,del]
     end
+
   end
 end
