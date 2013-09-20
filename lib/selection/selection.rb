@@ -33,13 +33,13 @@ class PopGen
 
   #get nucleotide frequencies for each position
   def nucleotide_freq
-    seq_al.columns.map do |column|
+    seq_al.columns.each_with_index.map do |column,index|
       gees = column.to_s.count('G')
       aaas = column.to_s.count('A')
       cees = column.to_s.count('C')
       tees = column.to_s.count('T')
       del  = column.to_s.count('-')
-      "#{gees},#{aaas},#{cees},#{tees},#{del}"
+      "#{index},#{gees},#{aaas},#{cees},#{tees},#{del}"
       # [gees,aaas,cees,tees,del]
     end
 
